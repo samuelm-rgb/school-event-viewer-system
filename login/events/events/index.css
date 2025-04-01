@@ -1,0 +1,293 @@
+/* Styles for the navigation bar */
+.navbar {
+    display: flex; /* Arranges items in a row */
+    justify-content: space-between; /* Pushes elements to the edges */
+    align-items: center; /* Vertically centers items */
+    background-color: #1a1a2e; /* Dark blue background */
+    padding: 15px 20px; /* Adds spacing inside navbar */
+    color: white; /* Sets text color */
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures full width */
+    z-index: 1000; /* Ensures navbar stays above other elements */
+}
+
+/* Logo styles */
+.logo a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets text color */
+    font-size: 26px; /* Increases font size */
+    font-weight: bold; /* Makes text bold */
+    letter-spacing: 1px; /* Increases spacing between letters */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.logo a:hover {
+    color: #ffcc00; /* Changes color when hovered */
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex; /* Aligns links in a row */
+    gap: 25px; /* Creates spacing between links */
+}
+
+/* Individual navigation links */
+.nav-links a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Sets text color */
+    font-size: 18px; /* Adjusts font size */
+    font-weight: 500; /* Medium font weight */
+    padding: 8px 12px; /* Adds spacing inside links */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 5px; /* Rounds corners */
+}
+
+.nav-links a:hover {
+    color: #3498db; /* Blue text */
+    background: rgba(52, 152, 219, 0.2); /* Light blue background */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex; /* Aligns input and button in a row */
+    align-items: center; /* Centers items vertically */
+    background: white; /* Sets background color */
+    padding: 5px 10px; /* Adds internal spacing */
+    border-radius: 20px; /* Rounds corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.search-bar input {
+    border: none; /* Removes input border */
+    outline: none; /* Removes default outline */
+    padding: 8px; /* Adds space inside input field */
+    font-size: 16px; /* Sets font size */
+    width: 180px; /* Adjusts width */
+    background: transparent; /* Makes background transparent */
+}
+
+.search-bar button {
+    background: none; /* Removes background */
+    border: none; /* Removes border */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: 18px; /* Adjusts icon size */
+    /* Adds spacing between input and button */
+    margin-right: 10px;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-overlay .btn {
+    background: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero-overlay .btn:hover {
+    background: #e69500;
+}
+
+/* Announcements Section */
+.announcements-table {
+    padding: 20px;
+    background: #333;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #ddd;
+}
+
+#announcements-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #007bb5;
+    color: white;
+}
+
+#announcements-container th, 
+#announcements-container td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#announcements-container th {
+    background: #005f8b;
+    text-transform: uppercase;
+}
+
+/* Hide the ID column */
+#announcements-container th:nth-child(1),
+#announcements-container td:nth-child(1) {
+    display: none;
+}
+
+
+
+
+/* Event Categories Section */
+.event-categories {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 1200px; /* Ensures it doesn't overflow */
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.category {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px; /* Prevents oversized cards */
+    min-width: 250px; /* Ensures cards are uniform */
+}
+
+.category img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.category p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #000;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+/* Footer Section */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #1e90ff;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .swiper-container {
+        max-width: 95%;
+    }
+    .category {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category {
+        max-width: 180px;
+    }
+}

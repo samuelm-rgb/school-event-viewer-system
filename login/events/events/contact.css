@@ -1,0 +1,308 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.2);
+    border-radius: 5px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex; /* Aligns input and button in a row */
+    align-items: center; /* Centers items vertically */
+    background: white; /* Sets background color */
+    padding: 5px 10px; /* Adds internal spacing */
+    border-radius: 20px; /* Rounds corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.search-bar input {
+    border: none; /* Removes input border */
+    outline: none; /* Removes default outline */
+    padding: 8px; /* Adds space inside input field */
+    font-size: 16px; /* Sets font size */
+    width: 180px; /* Adjusts width */
+    background: transparent; /* Makes background transparent */
+}
+
+.search-bar button {
+    background: none; /* Removes background */
+    border: none; /* Removes border */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: 18px; /* Adjusts icon size */
+    margin-left: 5px; /* Adds spacing between input and button */
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Contact Form Section (Left Side) */
+.container {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Q&A Section (Right Side) */
+.qa-section {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.qa-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 5px solid #007BFF;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.qa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qa-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.qa-question {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.qa-response {
+    background: #e9f5ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.pending-response {
+    color: #ff5733;
+    font-style: italic;
+}
+
+.no-questions {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+/* FAQ Section */
+.faq {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #007BFF;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container, .qa-section {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+/* Footer Section */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #1e90ff;
+}

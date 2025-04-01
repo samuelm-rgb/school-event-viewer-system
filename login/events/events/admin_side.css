@@ -1,0 +1,79 @@
+/* Announcement Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Announcements Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    table-layout: fixed;  /* Ensures table maintains layout */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    word-wrap: break-word; /* Wraps long words */
+    overflow-wrap: break-word; /* Ensures text doesn't overflow */
+    white-space: normal; /* Allows text to wrap to the next line */
+    max-width: 300px; /* Limits width for better readability */
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto; /* Enables scrolling on smaller screens */
+    }
+}
+
+/* Announcement Display */
+.announcement-container {
+    width: 80%;
+    margin: auto;
+}
+
+.announcement {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.announcement h3 {
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.announcement small {
+    color: gray;
+}
